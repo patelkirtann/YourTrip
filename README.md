@@ -1,0 +1,2 @@
+# YourTrip
+o This project was about making a plan for your trip and also recommend it to your friends. o The idea of this website is to stay connected socially with the friends and the family while traveling. One can easily create an account online and search for the trips which have been done by someone else and had a good experience with. They can also create a trip and update the trip photos by the places. o Also, the part of storing their trip photos and trips let them use the data whenever they need it and can share it with anyone.
