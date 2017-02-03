@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Make My Tour</title>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script>
+		$(document).ready(function(){
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<script>
+
+		function previewFiles() {
+
+  var preview = document.querySelector('#preview');
+  var files   = document.querySelector('input[type=file]').files;
+
+  function readAndPreview(file) {
+
+    // Make sure `file.name` matches our extensions criteria
+    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+      var reader = new FileReader();
+
+      reader.addEventListener("load", function () {
+        var image = new Image();
+        image.height = 100;
+        image.title = file.name;
+        image.src = this.result;
+        preview.appendChild( image );
+      }, false);
+
+      reader.readAsDataURL(file);
+    }
+
+  }
+
+  if (files) {
+    [].forEach.call(files, readAndPreview);
+  }
+
+}
+
+
+function outputname() {
+ 
+var x,y,name,a,b,answer;
+var divMain = document.getElementById("trips");
+divMain.classList.add('mystyle');
+x=document.getElementById("form1") ;
+// y=x.elements["name1"].value;
+// document.getElementById("demo").innerHTML="Place Name:"+y+"<br/>";
+
+var nameDiv = document.createElement("div");
+// nameDiv.classList.add('mystyle');
+var form_vals =  document.getElementById("demo");
+var name = x.elements["name1"].value;
+nameDiv.innerHTML="Place Name:"+name+"<br/>";
+
+divMain.appendChild(nameDiv);
+
+
+var dateDiv = document.createElement("div");
+// dateDiv.classList.add('mystyle');
+var form_vals =  document.getElementById("form_values");
+var date = x.elements["date"].value;
+dateDiv.innerHTML="Date:"+date+"<br/>";
+divMain.appendChild(dateDiv);
+
+var timeDiv = document.createElement("div");
+// timeDiv.classList.add('mystyle');
+var form_vals =  document.getElementById("form_values1");
+var time = x.elements["usr_time1"].value;
+timeDiv.innerHTML="StartTime:"+time+"<br/>";
+
+divMain.appendChild(timeDiv);
+
+
+var timeDiv2 = document.createElement("div");
+// timeDiv2.classList.add('mystyle');
+var form_vals =  document.getElementById("form_values2");
+var time = x.elements["usr_time2"].value;
+timeDiv2.innerHTML="EndTime:"+time+"<br/>";
+
+divMain.appendChild(timeDiv2);
+
+var descriptionDiv = document.createElement("div")
+
+// div.style.height = "100px";
+// div.style.color="blue";
+// descriptionDiv.classList.add('mystyle');
+var form_vals =  document.getElementById("form_values3");
+var descrip = x.elements["description"].value;
+descriptionDiv.innerHTML="Place Description:"+descrip+"<br/>";
+
+divMain.appendChild(descriptionDiv);
+
+
+}
+
+var img = document.createElement('img');
+      img.src = images[index];
+      document.getElementById("viewTrip").appendChild(img);
+
+</script>
+	</head>
+	<body  >
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="index-1.html">VIEW TOUR</a></li>
+								<li><a href="index-2.html">MAKE MY TRIP</a></li>
+								<li class="current"><a href="index-3.html">LOGIN</a></li>
+								<li><a href="index-4.html">SIGNUP</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+<!--==============================Content=================================-->
+		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="grid_5">
+					<div class="contents" id="content" >
+						<h1 id="createh1">CREATE TOUR</h1>
+   <div class="createform" >
+    <fieldset id="feildset">
+			
+			<form id="form1" class="form1">
+				<label for='name'>Name:</label>
+ <input name="name1" type="text" size="0"><br/>
+ <label for='name'>Date:</label>
+  <input name="date" type="date" size="20"><br/>
+
+  <label for='name'>Start time:</label>
+  <input type="time" name="usr_time1"></br>
+  <label for='name'>End time:</label>
+  <input type="time" name="usr_time2"></br>
+ 
+<label  for='name'>Add Description: </label>
+<input id="dbox" type='text' name='description'  value='' ><br/>
+ <input id="browse" type="file"  multiple></br>
+</form>
+</fieldset>
+<!-- <button onclick="outputname();previewFiles()">Submit</button> -->
+</div>
+
+<div >
+<button  class="btn" onclick="outputname();previewFiles()">Submit</button>
+
+ <div class="display">
+
+ <div id="trips" ></div>
+<div id="demo"> </div>
+<div id="form_values"> </div>
+<div id="form_values1"> </div>
+<div id="form_values2"> </div>
+<div id="form_values3"> </div>
+<div id="preview"></div>
+<hr id="hr">
+</div>
+</div>
+<div class="clear"></div>
+						
+					
+				</div>
+			</div>
+			<!-- <figure class="createmap">
+							<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+						</figure> -->
+					</div>
+		</div>
+
+		</div>
+
+	</div>
+	<div>
+
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="socials">
+						<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+						<a href="https://twitter.com" class="fa fa-twitter"></a>
+						<a href="https://plus.google.com" class="fa fa-google-plus"></a>
+
+					</div>
+				
+					 <ul class="footer">
+	               		 <li><a href="contact us">Contact Us</a></li>
+	               		 <li><a href="/en/FAQ">Frequently Asked Questions (FAQ)</a></li>
+	            	</ul>
+
+				</div>
+			</div>
+		</footer>
+		
+	</body>
+</html>
+
+
+
+
+
+
+

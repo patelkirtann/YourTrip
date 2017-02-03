@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>View Tour</title>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script>
+    var images = ["images/page2_img2.jpg","images/img3.jpg","images/Yosemite-iPhone-4.jpg","images/L9N1zGk.jpg"];
+    var index = 0;
+
+    function buildImage() {
+      // var img = document.createElement('img');
+      // img.src = images[index];
+      // document.getElementById("viewTrip").appendChild(img);
+    }
+   var index;
+    function changeImage(){
+      var img = document.getElementById('viewTrip').getElementsByTagName('img')[0]
+      index--;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+    function changeImage1(){
+      var img = document.getElementById('viewTrip').getElementsByTagName('img')[0]
+      index++;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+    function changeImage2(){
+      var img = document.getElementById('viewTrip2').getElementsByTagName('img')[0]
+      index--;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+    function changeImage2(){
+      var img = document.getElementById('viewTrip2').getElementsByTagName('img')[0]
+      index++;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+    function changeImages(){
+      var img = document.getElementById('viewTrip1').getElementsByTagName('img')[0]
+      index--;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+    function changeImages1(){
+      var img = document.getElementById('viewTrip1').getElementsByTagName('img')[0]
+      index++;
+      if(index==-1)
+        index=images.length-1;
+      index = index % images.length; // This is for if this is the last image then goto first image
+      img.src = images[index];
+      console.log(index);
+    }
+</script>
+	</head>
+	<body >
+<!--==============================header=================================-->
+		<header>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul class="sf-menu">
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="index-1.html">VIEW TOUR</a></li>
+								<li><a href="index-2.html">MAKE MY TRIP</a></li>
+								<li class="current"><a href="index-3.html">LOGIN</a></li>
+								<li><a href="index-4.html">SIGNUP</a></li>
+							</ul>
+						</nav>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+			</div>
+		</header>
+<!--==============================Content=================================-->
+
+
+
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
+			<div class="container_12">
+				<div class="grid_7">
+
+					<h3>San diego</h3>
+					<div class="blog">
+						<time datetime="2014-10-01">15<span>Feb</span></time>
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">Santa Monica</a></div>Start Time:2:00 PM</br> End Time:5:00 PM
+						</div>
+						<div class="clear"></div>
+						<div class="block2" id="viewTrip">
+						<img id="imgsize" src="images/page4_img1.jpg" alt="" class="img_inner">
+										<div class="contents1">
+    <button onclick="changeImage()"><<</button>
+    <button onclick="changeImage1()">>></button>
+    </div>
+						<p>Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan. </p>Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+						<br>
+					<!-- <a href="#" class="link1">LEARN MORE</a> -->
+					</div>
+				</div>
+
+				<div class="blog">
+						<time datetime="2014-10-01">15<span>Feb</span></time>
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">Malibu Beach</a></div>Start Time:2:00 PM</br> End Time:5:00 PM
+						</div>
+						<div class="clear"></div>
+						<div class="block2" id="viewTrip2">
+						<img id="imgsize1" src="images/page4_img1.jpg" alt="" class="img_inner">
+										<div class="contents1">
+    <button onclick="changeImage2()"><<</button>
+    <button onclick="changeImage2()">>></button>
+    </div>
+						<p>Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan. </p>Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+						<br>
+					<!-- <a href="#" class="link1">LEARN MORE</a> -->
+					</div>
+				</div>
+
+				
+						<div class="blog">
+						<time datetime="2014-10-01">17<span>Feb</span></time>
+						<div class="extra_wrapper">
+							<div class="text1 col1"><a href="#">Universal Studios</a></div>Start Time:2:00 PM</br> End Time:5:00 PM
+							<a href="#">Admin</a>
+						</div>
+						<div class="clear"></div>
+						<div class="block2" id="viewTrip1">
+						<img id="imgsize2"
+						src="images/page4_img2.jpg" alt="" class="img_inner">
+							  <div class="contents1">
+    <button onclick="changeImages()"><<</button>
+    <button onclick="changeImages1()">>></button>
+    </div>
+						<p>Cras facilisis, nulla vel viverra auctor, leo gna sodales felis, quis malesuada nibh odio ut velit. Proin pharetra luctus diam, a celerisque eros convallis accumsan. </p>Maecenas vehicula egestas venenatis. Duis massa elit, auctor non pellentesque vel aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibh.
+						<br>
+						<!-- <<a href="#" class="link1">LEARN MORE</a> -->
+ 					</div>
+				</div>
+			<!-- <div id="imgdiv"><img class="imgmap" src="images/La_route_map.png"></div> -->
+						<!-- <<a href="#" class="link1">LEARN MORE</a> -->
+ 					</div>
+ 				</div>
+</div>
+
+			 
+
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="socials">
+						<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+						<a href="https://twitter.com" class="fa fa-twitter"></a>
+						<a href="https://plus.google.com" class="fa fa-google-plus"></a>
+
+					</div>
+				
+					 <ul class="footer">
+	               		 <li><a href="contact us">Contact Us</a></li>
+	               		 <li><a href="/en/FAQ">Frequently Asked Questions (FAQ)</a></li>
+	            	</ul>
+
+				</div>
+			</div>
+		</footer>
+		
+	</body>
+</html> 
+
+
